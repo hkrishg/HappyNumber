@@ -54,9 +54,9 @@ class Main {
     do {
       slowRunner = Main.getNext(slowRunner);
       fastRunner = Main.getNext(Main.getNext(fastRunner));
-    } while (fastRunner != 1 && slowRunner != fastRunner);
+    } while (slowRunner != fastRunner);
     
-    return fastRunner == 1;
+    return slowRunner == 1;
   }
 
   public static void main(String[] args) {
